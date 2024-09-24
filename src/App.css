@@ -1,0 +1,107 @@
+/* App.css */
+.container {
+  padding: 20px;
+  width: 450px;
+  background-color: #f7f4ed;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.date-navigation {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  overflow-x: scroll;
+}
+
+.date-button {
+  margin: 0 5px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  min-width: 70px;
+}
+
+.date-scroller {
+  gap: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebeae8;
+  color: #7d7971;
+  cursor: pointer;
+}
+
+.date-button.active {
+  background-color: #eaeff3;
+  font-weight: 600;
+}
+
+.time-slots {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.time-slot {
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.time-slot.selected {
+  background-color: #eaeff3;
+}
+
+.sub-heading {
+  color: #aaa;
+  font-size: 12px;
+  font-weight: 600px;
+  margin-bottom: 20px;
+}
+
+.main-heading {
+  margin-bottom: 5px !important;
+}
+
+.confirmation {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Styling the scrollbar */
+.date-navigation::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+
+.date-navigation::-webkit-scrollbar-thumb {
+  background-color: #e3eaf0;
+  border-radius: 5px;
+}
+
+.date-navigation::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
