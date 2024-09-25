@@ -51,6 +51,7 @@
   background-color: #ebeae8;
   color: #7d7971;
   cursor: pointer;
+  padding: 0 5px;
 }
 
 .date-button.active {
