@@ -1,45 +1,49 @@
 /* App.css */
+
 .container {
   padding: 20px;
-  width: 450px;
+  max-width: 450px;
   background-color: #f7f4ed;
+  margin: auto;
 }
 
 .app {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .date-navigation {
   display: flex;
   align-items: center;
-  width: 300px;
+  width: 100%;
   overflow-x: scroll;
+  scrollbar-width: thin;
 }
 
 .date-button {
   margin: 0 5px;
-  padding: 10px 15px;
+  padding: 10px;
   border: 1px solid #ccc;
   cursor: pointer;
   text-align: center;
   background-color: #ffffff;
   border-radius: 10px;
-  min-width: 70px;
+  min-width: 60px;
+  flex-shrink: 0;
 }
 
 .date-scroller {
   gap: 10px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 .arrow {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -72,12 +76,13 @@
 
 .time-slot.selected {
   background-color: #eaeff3;
+  font-weight: 600;
 }
 
 .sub-heading {
   color: #aaa;
   font-size: 12px;
-  font-weight: 600px;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
@@ -104,4 +109,67 @@
 .date-navigation::-webkit-scrollbar-track {
   background-color: #f1f1f1;
   border-radius: 5px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .date-button {
+    min-width: 50px;
+    padding: 8px;
+  }
+
+  .time-slots {
+    align-items: flex-start;
+  }
+
+  .arrow {
+    width: 35px;
+    height: 35px;
+  }
+
+  .main-heading {
+    font-size: 1.2rem;
+  }
+
+  .sub-heading {
+    font-size: 0.9rem;
+  }
+
+  .time-slot {
+    padding: 8px;
+    border-radius: 7px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .arrow {
+    width: 30px;
+    height: 30px;
+  }
+
+  .date-button {
+    min-width: 45px;
+    padding: 6px;
+  }
+
+  .main-heading {
+    font-size: 1rem;
+  }
+
+  .sub-heading {
+    font-size: 0.8rem;
+  }
+
+  .time-slot {
+    padding: 6px;
+  }
 }
